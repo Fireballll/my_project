@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+button{
+    font-family: inherit;
+}
+
 body {
     margin: 0;
     font-family: Noto Sans;
@@ -234,7 +238,6 @@ input {
   color: #fff;
   cursor: pointer;
   display: flex;
-  font-family: Mija,-apple-system,BlinkMacSystemFont,Roboto,"Roboto Slab","Droid Serif","Segoe UI",system-ui,Arial,sans-serif;
   font-size: 1.15em;
   font-weight: 700;
   justify-content: center;
