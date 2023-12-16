@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600;1,700&family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&family=Open+Sans:ital@0;1&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600;1,700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+
 *, ::before, ::after{
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: Noto Sans;
     padding: 0;
 }
 
@@ -23,7 +27,10 @@ nav {
 
 .logo {
     color: white;
-    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    background-image: url(./img/hospital-1214-svgrepo-com.svg);
+    background-size: cover;
 }
 
 .nav-links {
@@ -98,9 +105,14 @@ ul{
 .search-icon {
     width: 16px;
     height: 16px;
+    margin-top: 3px;
     background-image: url(./img/search.png);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     cursor: pointer;
+    top: 50%;
+    left: 50%;
 }
 
 .search-icon:hover{
@@ -325,7 +337,7 @@ input {
 
 
 /* для выдгуків */
-  .testimonials-section {
+.testimonials-section {
     background-color: #f9f9f9;
     padding: 40px 20px;
     text-align: center;
@@ -336,13 +348,22 @@ input {
     margin-bottom: 20px;
 }
 
+.testimonial-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .testimonial-card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .testimonial-content {
@@ -356,24 +377,8 @@ input {
 }
 
 @media screen and (min-width: 768px) {
-    .testimonials-section {
-        padding: 80px 20px;
-    }
-
-    .testimonial-card {
-        display: flex;
-        max-width: 600px;
-        margin: 20px auto;
-    }
-
-    .testimonial-content {
-        flex: 1;
-        padding: 20px;
-    }
-
-    .testimonial-author {
-        flex-shrink: 0;
-        padding: 20px;
+    .testimonial-cards-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -396,11 +401,14 @@ input {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .footer-section {
     flex: 1;
     margin: 0 20px;
+    max-width: 450px;
 }
 
 .footer-section h3 {
@@ -442,7 +450,32 @@ a:hover {
     .footer-content {
         flex-direction: column;
     }
+
+    .icon-link:last-child{
+        padding-bottom: 10px;
+    }
 }
 
-
-
+.icon-link:first-child{
+    background-image: url(./img/facebook-color-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+.icon-link:nth-child(2){
+    background-image: url(./img/twitter-color-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+.icon-link:last-child{
+    background-image: url(./img/instagram-1-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+}
