@@ -17,14 +17,66 @@
                 <li><a href="./our_offers.html">Наші послуги</a></li>
                 <li><a href="./our_specialists.html">Наші спеціалісти</a></li>
                 <li><a href="#">Вхід/Реєстрація</a></li>
-                <div class="search-icon"></div>
+                <div class="search-icon" id="searchIcon"></div>
             </ul>
             <div class="burger">&#9776;</div>
         </nav>
     </header>
 
-
-
+    <section class="doctor-section">
+        <div class="doctor-info">
+            <img src="./img/doctors/pexels-tima-miroshnichenko-5452293.jpg" alt="Doctor Image" class="doctor-image">
+            <div class="doctor-description">
+                <h2 class="doctor-name">Ленс Стролл</h2>
+                <p class="doctor-profession">Спеціальність: Практолог</p>
+                <p class="doctor-education">Освіта: Медичний факультет УЖНУ, 2013 рік</p>
+                <p class="doctor-experience">Досвід роботи: Більше 10 років у медичній сфері</p>
+                <p class="doctor-about">Про Лікаря: 
+                    Ленс Стролл — видатний практолог(став ним тому що руки із сраки) і лікар з високою кваліфікацією. Завдяки його досвіду в практології, він успішно діагностує та лікує широкий спектр захворювань, забезпечуючи високий стандарт медичної допомоги.</p>
+                <div class="doc-sec"><button class="bn632-hover bn28" id="zapysButton">Записатися до лікаря</button></div>
+            </div>
+        </div>
+    </section>
+    <section class="doctor-section">
+        <div class="doctor-info-2">
+            <div class="doctor-description">
+                <h2 class="doctor-name">С'юзі Вольф</h2>
+                <p class="doctor-profession">Спеціальність: Хірург</p>
+                <p class="doctor-education">Освіта: КПІ, хірургічний факультет, 2008 рік</p>
+                <p class="doctor-experience">Досвід роботи: Більше 15 років у медичній сфері</p>
+                <p class="doctor-about">Про Лікаря: 
+                    С'юзі Вольф — видатний хірург із вражаючим фаховим досвідом та винятковим підходом до хірургічних втручань. Її високий рівень експертизи робить доктора Вольф визнаним фахівцем в галузі хірургії.</p>
+                <div class="doc-sec"><button class="bn632-hover bn28" id="zapysButton">Записатися до лікаря</button></div>
+            </div>
+            <img src="./img/doctors/pexels-thirdman-5327585.jpg" alt="Doctor Image" class="doctor-image">
+        </div>
+    </section>
+    <section class="doctor-section">
+        <div class="doctor-info">
+            <img src="./img/doctors/pexels-tima-miroshnichenko-5407206.jpg" alt="Doctor Image" class="doctor-image">
+            <div class="doctor-description">
+                <h2 class="doctor-name">Келлі Ферстапен</h2>
+                <p class="doctor-profession">Спеціальність: Кардіолог</p>
+                <p class="doctor-education">Освіта: Львівська політехніка, медичний факультет, 2018 рік</p>
+                <p class="doctor-experience">Досвід роботи: Більше 5 років у медичній сфері</p>
+                <p class="doctor-about">Про Лікаря: Келлі Ферстапен — висококваліфікована кардіологиня(їсть серця людей) з вражаючим досвідом. Її ефективність у діагностиці та лікуванні серцевих захворювань робить її визнаною фахівчинею в галузі кардіології. </p>
+                <div class="doc-sec"><button class="bn632-hover bn28" id="zapysButton">Записатися до лікаря</button></div>
+            </div>
+        </div>
+    </section>
+    <section class="doctor-section">
+        <div class="doctor-info-2">
+            <div class="doctor-description">
+                <h2 class="doctor-name">Джордж Рассел</h2>
+                <p class="doctor-profession">Спеціальність: Сімейний лікар</p>
+                <p class="doctor-education">Освіта: КНУ, медичний факультет, 2015 рік</p>
+                <p class="doctor-experience">Досвід роботи: Більше 8 років у медичній сфері</p>
+                <p class="doctor-about">Про Лікаря: Джордж Рассел — досвідчений сімейний лікар(а по факту терорист) із турботливо-терористичним підходом до кожного пацієнта. Його великий досвід у сфері сімейної медицини робить його незамінною ланкою в наданні якісної та повноцінної медичної допомоги.</p>
+                <div class="doc-sec"><button class="bn632-hover bn28" id="zapysButton">Записатися до лікаря</button></div>
+            </div>
+            <img src="./img/doctors/pexels-tima-miroshnichenko-5452268.jpg" alt="Doctor Image" class="doctor-image">
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -52,12 +104,68 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 Your Company. All rights reserved.</p>
+            <p>&copy; 2023 FamilyHospital. All rights reserved.</p>
         </div>
     </footer>
 
 
+    <!-- модалка для хуйні -->
+    <div id="zapys" class="modal">
+
+        
+            <div class="modal-content">
+              <span class="close" id="closeBtn">&times;</span>
+              <h2 id="modalTitle">Запис до лікаря</h2>
+              <form id="appointmentForm">
+                <label for="name" id="nameLabel">Прізвище, ім'я, по-батькові:</label>
+                <input type="text" id="name" name="name">
+                <label for="date" id="dateLabel">Дата:</label>
+                <input type="date" id="date" name="date">
+                <input type="submit" class="max-width-for-button bn632-hover bn28" value="Записатися">
+              </form>
+            </div>
+          </div>
+          
+
+
+      <!-- <input type="submit" class="max-width-for-button bn632-hover bn28" value="Записатися"> -->
+
+
 </body>
+<!-- для бургера -->
 <script src="script.js"></script>
+<!-- для модалки -->
+<script>
+    var modal = document.getElementById("zapys");
+    var btns = document.getElementsByClassName("bn632-hover");
+    var span = document.getElementsByClassName("close")[0];
+    
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].onclick = function() {
+        modal.style.display = "block";
+      }
+    }
+    
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const searchIcon = document.querySelector('.search-icon');
+    searchIcon.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.location.href = 'index.html';
+    });
+});
+</script>
 
 </html>
