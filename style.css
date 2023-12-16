@@ -218,6 +218,9 @@ input {
     .search-section {
         padding: 20px;
     }
+    .search-options{
+        width: 250px;
+    }
 }
 
 @media screen and (min-width: 769px) {
@@ -226,6 +229,8 @@ input {
         justify-content: center;
         gap: 30px;
     }
+
+   
 }
 
 
