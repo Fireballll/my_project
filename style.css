@@ -686,7 +686,7 @@ a:hover {
 .modal-content {
     position: relative;
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
@@ -724,10 +724,10 @@ form {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    text-align: center;
+    /* text-align: center; */
 }
 
-label, .form-input, input[type="date"], input[type="text"], input[type="tel"], input[type="email"], input[type="password"]{
+label, .form-input, input[type="date"], input[type="tel"], input[type="email"], .desing_input_now, input[type="password"]{
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -739,6 +739,7 @@ label, .form-input, input[type="date"], input[type="text"], input[type="tel"], i
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
     text-align: left;
 }
@@ -768,7 +769,6 @@ label, .form-input, input[type="date"], input[type="text"], input[type="tel"], i
 
 input, label{
     padding: 0;
-    margin: 0;
 }
 
 /* Стилі для форми та її елементів */
@@ -839,4 +839,14 @@ input, label{
 .max-width-for-button{
     margin: 0 auto;
     width: 200px;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.this-label{
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
 }
