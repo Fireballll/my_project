@@ -316,9 +316,11 @@
     var toRegister = document.getElementById("toRegister");
 
     link.onclick = function(event) {
-        event.preventDefault();
+    event.preventDefault();
+    setTimeout(function() {
         modal.classList.add("show-modal");
-    }
+    }, 100); // Затримка в 100 мілісекунд
+}
 
     toLogin.onclick = function(event) {
         event.preventDefault();
