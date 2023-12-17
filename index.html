@@ -16,7 +16,7 @@
                 <li><a href="index.html">Головна сторінка</a></li>
                 <li><a href="./our_offers.html">Наші послуги</a></li>
                 <li><a href="./our_specialists.html">Наші спеціалісти</a></li>
-                <li><a href="#">Вхід/Реєстрація</a></li>
+                <li><a href="" id="myLink">Вхід/Реєстрація</a></div></li>
                 <div class="search-icon"></div>
             </ul>
             <div class="burger">&#9776;</div>
@@ -188,6 +188,49 @@
         </div>
     </footer>
 
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="registerForm">
+                <h2>Реєстрація</h2>
+                <div class="form-group">
+                    <label for="lname">Прізвище:</label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+                <div class="form-group">
+                    <label for="fname">Ім'я:</label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <div class="form-group">
+                    <label for="pname">По-батькові:</label>
+                    <input type="text" id="pname" name="pname">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Номер телефону:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="email">Електронна пошта:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <input type="submit" class="max-width-for-button bn632-hover bn28" value="Зареєстуватися">
+                <p>Вже зареєстровані? <a class="change-form" href="#" id="toLogin">Вхід</a></p>
+            </form>
+            <form id="loginForm" class="hide">
+                <h2>Вхід</h2>
+                <div class="form-group">
+                    <label for="loginEmail">Електронна пошта:</label>
+                    <input type="email" id="loginEmail" name="loginEmail">
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <input type="submit" class="max-width-for-button bn632-hover bn28" value="Вхід">
+                <p>Не зареєстровані? <a class="change-form" href="#" id="toRegister">Реєстрація</a></p>
+            </form>
+        </div>
+    </div>
 
 </body>
 <!-- smooth переход -->
@@ -262,4 +305,43 @@
         window.location.href = 'index.html'; // Adjust the URL accordingly
     });
 </script>
+
+<script>
+     var modal = document.getElementById("myModal");
+    var link = document.getElementById("myLink");
+    var span = document.getElementsByClassName("close")[0];
+    var registerForm = document.getElementById("registerForm");
+    var loginForm = document.getElementById("loginForm");
+    var toLogin = document.getElementById("toLogin");
+    var toRegister = document.getElementById("toRegister");
+
+    link.onclick = function(event) {
+        event.preventDefault();
+        modal.classList.add("show-modal");
+    }
+
+    toLogin.onclick = function(event) {
+        event.preventDefault();
+        registerForm.style.display = "none";
+        loginForm.style.display = "block";
+    }
+
+    toRegister.onclick = function(event) {
+        event.preventDefault();
+        loginForm.style.display = "none";
+        registerForm.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.classList.remove("show-modal");
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.classList.remove("show-modal");
+        }
+    }
+</script>
+
+
 </html>

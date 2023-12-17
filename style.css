@@ -667,7 +667,7 @@ a:hover {
 
   /* модалка для цієї сторінки */
 
-  .modal {
+.modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -677,6 +677,10 @@ a:hover {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
+}
+
+.modal.show-modal {
+    display: block;
 }
 
 .modal-content {
@@ -716,25 +720,60 @@ a:hover {
     cursor: pointer;
 }
 
-/* Стилі для форми та її елементів */
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    text-align: center;
 }
 
-label, .form-input, input[type="date"], input[type="submit"] {
+label, .form-input, input[type="date"], input[type="text"], input[type="tel"], input[type="email"], input[type="password"]{
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 768px){
-    .max-width-for-button{
-        width: 200px;
+
+/* стилі для головної модалки */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+    .form-group {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-group label {
+        margin-bottom: 0;
+    }
+
+    .form-group input {
+        width: 60%;
     }
 }
+
+.hide {
+    display: none;
+}
+
+input, label{
+    padding: 0;
+    margin: 0;
+}
+
+/* Стилі для форми та її елементів */
+
 
 
 
@@ -793,3 +832,12 @@ label, .form-input, input[type="date"], input[type="submit"] {
     }
 }
 
+
+.change-form{
+    color: #aaaaaa;
+}
+
+.max-width-for-button{
+    margin: 0 auto;
+    width: 200px;
+}
