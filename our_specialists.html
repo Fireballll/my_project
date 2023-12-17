@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo"></div>
+            <div class="logo" id="logo"></div>
             <ul class="nav-links">
                 <li><a href="index.html">Головна сторінка</a></li>
                 <li><a href="./our_offers.html">Наші послуги</a></li>
@@ -166,5 +166,12 @@
     });
 });
 </script>
-
+<!-- logo ckickable -->
+<script>
+    // Add an event listener to the existing logo element
+    const logo = document.getElementById('logo');
+    logo.addEventListener('click', function() {
+        window.location.href = 'index.html'; // Adjust the URL accordingly
+    });
+</script>
 </html>

@@ -36,6 +36,7 @@ nav {
     height: 30px;
     background-image: url(./img/hospital-1214-svgrepo-com.svg);
     background-size: cover;
+    cursor: pointer;
 }
 
 .nav-links {
