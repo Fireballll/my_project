@@ -345,7 +345,7 @@ input {
   }
 
 
-/* для выдгуків */
+/* для відгуків */
 .testimonials-section {
     background-color: #f9f9f9;
     padding: 40px 20px;
@@ -606,7 +606,7 @@ a:hover {
     border: none;
     background-size: 300% 100%;
     border-radius: 50px;
-    moz-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -614,7 +614,7 @@ a:hover {
   
   .bn632-hover:hover {
     background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -717,3 +717,61 @@ input[type="submit"]:hover {
         width: 200px;
     }
 }
+
+
+
+
+/* стилі для послуг */
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.service {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.service:last-child {
+    border-bottom: none;
+}
+
+.service-title {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-description {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.cost {
+    color: #007BFF;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.doctor {
+    color: #28A745;
+    font-weight: bold;
+}
+
+.align-button{
+    text-align: end;
+}
+
+@media screen and (max-width: 768px) {
+    .service {
+        padding: 30px 10px;
+    }
+    .align-button{
+        text-align: center;
+    }
+}
+
